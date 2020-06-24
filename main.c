@@ -3,11 +3,13 @@
 /* TODO:
 *    - Logischen Ausdruck unter AUSDRUCK eingeben (Funktion anpassen)
 *    - ANZAHLBITS in Anzahl der Variablen des logischen Ausdrucks ändern
-*    - ZEILE 38 (Markierung!) entsprechend der Anzahl der Variablen anpassen
+*    - ZEILE 37 (Markierung!) entsprechend der Anzahl der Variablen anpassen
 */
 
+// ***************************** TODO *****************************
 #define AUSDRUCK(a, b, c, d)		!(a & b & c & d)
 #define ANZAHLBITS 4                     // entspricht Anzahl an Variablen
+// ****************************************************************
 
 // NICHTS ÄNDERN!
 #define SCHRANKE ((1 << ANZAHLBITS) - 1)    // Anzahl der Variationen (2^AnzahlBits)-1
@@ -30,11 +32,10 @@ int main(void) {
 
         int i = 0; // fungiert als Zurücksetzen in nächster Iteration
 
-        // **
-        // ZEILE ÄNDERN! Anzahl Variablen hier entsprechend
-        // anpassen.
+        // ************************* TODO *************************
+        //  ZEILE ÄNDERN! Anzahl Variablen hier entsprechend anpassen.
         if (AUSDRUCK(arr[0], arr[1], arr[2], arr[3])) i = 1; // bei true -> 1 setzen
-        // ***
+        // ********************************************************
 
         printf("%5i\n", i); // Ausgabe und neue Zeile
     }
